@@ -1,0 +1,19 @@
+﻿@model Prodact
+<h1>Create 
+    @ViewBag.HataMesaj
+</h1>
+<div asp-validation-summary="All"></div>
+
+<form asp-action="CreateProduct" asp-controller="Home" method="post">
+    <input type="text" asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+    <br/>
+    <input type="number" asp-for="Quantity" />
+    <span asp-validation-for="Quantity"></span>
+
+    <br/>
+    <input type="email" asp-for="Email" />
+    <span asp-validation-for="Email"></span>
+
+    <button>Gonder</button>
+</form>
